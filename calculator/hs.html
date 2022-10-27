@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Sort</h2>
+<h3>The Fisher Yates Method</h3>
+<p>Click the button (again and again) to sort the array in random order.</p>
+
+<!-- <button onclick="myFunction(points)">Try it</button>
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p> -->
+
+<!-- <input min="5" max="20" id="demo" step="1" type="text" onchange="MyFunc()">
+<button type="button" onclick="MyFunc()">Test Input</button> -->
+<p id="demo"></p>
+
+<script>
+  
+// function MyFunc(){
+//   const message = document.getElementById('p01');
+//     message.innerHTML = "";
+//   let x = document.getElementById('demo').value;
+//     try{
+//      if(x == "") throw "Input cannot be empty";
+//      if(isNaN(x))  throw "Input must be a number";
+
+//      if(Number(x) < 5) throw "X cannot be less than 5";
+//      if(Number(x) > 20) throw "X cannot be more than 20";
+
+//      throw "This number is valid";
+//     }
+//     catch(err){
+//     message.innerHTML =  err;
+//     }
+//     }
+
+// function myFunction() {
+//   const message = document.getElementById("p01");
+//   message.innerHTML = "";
+//   let x = document.getElementById("demo").value;
+//   try { 
+//     if(x == "")  throw "empty";
+//     if(isNaN(x)) throw "not a number";
+//     x = Number(x);
+//     if(x < 5)  throw "too low";
+//     if(x > 10)   throw "too high";
+//   }
+//   catch(err) {
+//     message.innerHTML = "Input is " + err;
+//   }
+// }
+
+
+
+let x = "";
+let y = "";
+const myObj = {
+  name: "John",
+  age: 30,
+  cars: [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+  ]
+}
+  
+  for(i in myObj.cars){
+   x += "<h4>" + myObj.cars[i].name + "</h4>";
+
+   for(y in myObj.cars[i].models){
+    x += myObj.cars[y].models + "<br>";
+   }
+
+  }
+
+
+document.getElementById("demo").innerHTML = x;
+
+
+</script>
+
+
+
+
+
+
+<!-- <script>
+let points = [40, 100, 1, 5, 25, 10];
+   document.getElementById("demo2").innerHTML = points;
+function myFunction(points) {
+  for (let i = 0; i < points.length; i++) 
+  {
+    for(let j = i + 1; j < points.length; j++)
+    {
+      console.log("Entery of i: " + points[i]);
+    console.log("Entery j: " + points[j]);
+
+if(points[i] > points[j]){
+   console.log("this is point i: " + points[i]);
+    console.log("this is point j: " + points[j]);
+     temp = points[i];
+     points[i] = points[j];
+     console.log("this is saved " + points[i]);
+     points[j] = temp;
+     console.log(temp);
+     console.log("Outgoing i: " + points[i] );
+    console.log("Outgoing j: " + points[j]);
+}
+  console.log("New i: " + points[i] );
+    console.log("New j: " + points[j]);
+    
+    }
+  }
+   document.getElementById("demo").innerHTML = points;
+}
+
+
+let pointz = "";
+points.forEach(myfunc);
+
+
+function myfunc(value, key){
+pointz += value + "<br>";
+console.log(pointz);
+}
+
+let map_ar = points.reduce(function(total, value){
+  return total + value;
+});
+
+document.getElementById('demo3').innerHTML = map_ar;
+
+
+
+
+
+
+</script> -->
+
+</body>
+</html>
